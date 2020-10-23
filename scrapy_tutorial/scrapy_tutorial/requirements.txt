@@ -1,0 +1,3 @@
+SQLAlchemy>=1.3.6
+Scrapy
+mysqlclient
