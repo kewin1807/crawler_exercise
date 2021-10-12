@@ -24,6 +24,7 @@ class QuotesSpider(scrapy.Spider):
             # }
 
             loader = ItemLoader(item=QuoteItem(), selector=quote)
+            print(quote)
             # pay attention to the dot .// to use relative xpath
             # loader.add_xpath('quote_content', ".//span[@class='text']/text()")
             loader.add_css('quote_content', '.text::text')

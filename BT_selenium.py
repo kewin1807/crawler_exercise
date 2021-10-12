@@ -27,6 +27,8 @@ class SeleniumHtmlGetter(HtmlGetter):
         chrome_options.add_experimental_option("useAutomationExtension", False)
         chrome_options.add_experimental_option(
             "excludeSwitches", ["enable-automation"])
+        PROXY = "us-wa.proxymesh.com:31280"
+        chrome_options.add_argument('--proxy-server=%s' % PROXY)
         browser = webdriver.Chrome(
             "chromedriver/chromedriver", options=chrome_options)
         browser.maximize_window()
